@@ -3,15 +3,19 @@ body {
 }
 header {
   display: flex;
-  background-color: cadetblue;
   border-radius: 10px;
   border: 5px double lightblue;
   font-size: 50px;
-  color: aliceblue;
   font-family: Georgia, "Times New Roman", Times, serif;
   justify-content: center;
   padding: 25px;
   margin-bottom: 50px;
+  animation-name: headerAnim;
+  animation-duration: 20s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  background: cadetblue;
+  color: aliceblue;
 }
 .quoteContainer {
   display: flex;
@@ -29,20 +33,39 @@ header {
   margin: 12px;
   padding-left: 15px;
   padding-right: 15px;
-  visibility: ;
+  animation-name: quoteFromAnim;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 .quote {
   background-color: cadetblue;
   border-radius: 10px;
   border: 5px double lightblue;
   color: aliceblue;
-  font-size: 35px;
   align-self: center;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   justify-content: center;
   align-items: flex-end;
   margin: 12px;
+  font-size: 35px;
   padding: 15px;
   font-style: italic;
+  animation-name: quoteAnim;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes quoteAnim {
+  from {background-color: cadetblue;}
+  to {background-color: transparent;}
+}
+@keyframes quoteFromAnim {
+  from {background-color: transparent;}
+  to {background-color: cadetblue;}
+}
+@keyframes headerAnim {
+  from {background-color: cadetblue;}
+  to {background-color: transparent;}
 }
